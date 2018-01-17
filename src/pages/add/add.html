@@ -1,0 +1,51 @@
+<!--
+  Generated template for the AddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add</ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="cancel()">Cancel</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list>
+        <ion-item>
+          <ion-label fixed>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="staff.name"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-label>Company</ion-label>
+          <ion-select [(ngModel)]="staff.company">
+            <ion-option value="MAMPU">MAMPU</ion-option>
+            <ion-option value="Kementerian Dalam Negeri">KLN</ion-option>
+            <ion-option value="Jabatan Perdana Menteri">JPM</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>IC No</ion-label>
+          <ion-input type="text" [(ngModel)]="staff.icNo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Image URL</ion-label>
+          <ion-input type="text" [(ngModel)]="staff.imageurl"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <img [src]="staff.imageurl || 'assets/imgs/logo.png'">
+
+      <div padding>
+          <button ion-button full (click)="save()">Save</button>
+      </div>
+      
+
+</ion-content>
