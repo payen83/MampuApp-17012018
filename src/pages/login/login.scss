@@ -1,0 +1,35 @@
+page-login {
+
+    .card-ios, .card-md {
+        margin: 12px;
+        width: calc(100% - 24px);
+        font-size: 1.4rem;
+        background: transparent;
+        -webkit-box-shadow: none; 
+    }
+
+    .background {
+        background-image: url('../assets/imgs/bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .item-ios, .item-md{
+        background-color: transparent;
+        color: white;
+    }
+
+    .text-input::-moz-placeholder {
+        color: white;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: white;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: white;
+      }
+
+}

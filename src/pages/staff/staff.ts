@@ -38,4 +38,19 @@ export class StaffPage {
     })
   }
 
+  pageDetail(staff: any){
+    this.navCtrl.push('DetailPage', {item: staff});
+  }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+    this.ionViewDidLoad();
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+
 }

@@ -9,6 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { StaffPageModule } from '../pages/staff/staff.module';
 import { AddPageModule } from '../pages/add/add.module';
+import { DetailPageModule } from '../pages/detail/detail.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { SignupPageModule } from '../pages/signup/signup.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    LoginPageModule,
+    SignupPageModule,
+    DetailPageModule,
     HttpClientModule,
     AddPageModule,
     StaffPageModule,
