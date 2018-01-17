@@ -10,9 +10,32 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class WebservicesProvider {
   baseURL: string = 'http://localhost/mampu/';
+  authURL: string = 'http://localhost/mampu/auth/api/';
 
   constructor(public http: HttpClient) {
     console.log('Hello WebservicesProvider Provider');
+  }
+
+  getAuth(type: string, user: any): Promise<any>{
+    let url: string = this.authURL + type;
+    let body = user;
+    
+    let header = new HttpHeaders().set('Content-Type', 'text/plain');
+    
+
+    return new Promise((resolve, reject) => {
+      this.http.post(url, body, {
+        headers: header
+      }).subscribe(res => {
+        alert('success')
+        resolve(res);
+
+      }, err => {
+        alert('fail')
+        reject(err);
+      })
+    })
+
   }
 
   getStaff(): Promise<any>{
